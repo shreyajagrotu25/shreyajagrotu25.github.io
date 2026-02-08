@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Shreya | Portfolio</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #f4f8ff;
+      color: #222;
+      line-height: 1.7;
+      scroll-behavior: smooth;
+    }
+
+    section {
+      padding: 70px 20px;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 34px;
+      margin-bottom: 60px;
+      color: #0a58ca;
+      font-weight: 600;
+    }
+
+    /* container */
+    .container {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    /* ===== HERO ===== */
+    #hero {
+      background: linear-gradient(135deg, #0a58ca, #1e88e5);
+      color: white;
+      text-align: center;
+      padding: 140px 20px;
+    }
+
+    #hero h1 {
+      font-size: 46px;
+      font-weight: 700;
+    }
+
+    .btn {
+      margin-top: 25px;
+      padding: 14px 26px;
+      background: white;
+      color: #0a58ca;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-block;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    
+    /* ===== ABOUT ===== */
+    .about-text {
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+      font-size: 18px;
+    }
+    .about-section {
+  padding: 70px 30px;
+}
+
+
+    .about-text p {
+      margin-bottom: 20px; 
+    }
+
+    /* ===== SKILLS ===== */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 28px;
+    }
+
+    .skill-card {
+      background: white;
+      padding: 30px;
+      border-radius: 16px;
+      text-align: center;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+      transition: 0.35s;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .skill-card i {
+      font-size: 34px;
+      color: #0a58ca;
+      margin-bottom: 10px;
+    }
+
+    /* ===== PROJECTS (bigger cards) ===== */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 40px;
+    }
+
+    .project-card {
+      background: white;
+      padding: 35px;
+      border-radius: 18px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+      transition: 0.35s;
+      min-height: 260px;
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .project-card h3 {
+      color: #0a58ca;
+      margin-bottom: 12px;
+      font-size: 20px;
+    }
+
+    .tech {
+      font-size: 13px;
+      font-weight: 600;
+      color: #666;
+      margin-bottom: 12px;
+    }
+
+    .project-links a {
+      margin-right: 14px;
+      color: #0a58ca;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    /* ===== FADE ANIMATION ===== */
+    .fade {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: 0.8s;
+    }
+
+    .fade.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    footer {
+      background: #0a58ca;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+<script>
+  const faders = document.querySelectorAll('.fade');
+
+  const appear = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  });
+
+  faders.forEach(el => appear.observe(el));
+</script>
+
+<body>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero">
+    <h1>Hi, I'm <b> Jagrotu Shreya</b></h1>
+    <p>
+      Integrated B.Tech + M.Tech (Information Technology)  
+      <br /> ABV-IIITM Gwalior
+    </p>
+    <a href="#about" class="btn">Know More</a>
+  </section>
+
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="fade about-section">
+    <h2>About Me</h2>
+
+    <p class="about-wrapper__info-text">
+  I am an Integrated Postgraduate student (B.Tech + M.Tech) in Information Technology at
+  <b>ABV-IIITM Gwalior</b> with a CGPA of <b>7.92</b>, driven by a strong foundation in
+  Computer Science fundamentals and analytical problem solving.
+</p>
+
+<p class="about-wrapper__info-text">
+  My core interests lie in <b>Data Structures & Algorithms, Database Systems, Machine Learning,
+  and System Design</b>. I enjoy approaching problems from first principles, designing efficient
+  algorithms, optimizing performance, and building scalable and reliable solutions.
+</p>
+
+<p class="about-wrapper__info-text">
+  As a scholar of the <b>Google TalentSprint Women Engineers Program</b>, selected among the top 1% nationwide,
+  I have received rigorous training and mentorship from industry experts, strengthening my
+  technical depth, logical thinking, and engineering discipline.
+</p>
+
+    <br />
+    <a class="btn" href="assets/Jagrotu_Shreya_IIITM.pdf" target="_blank">View Resume</a>
+  </section>
+
+
+  <!-- ===== SKILLS ===== -->
+  <section id="skills" class="fade">
+    <h2>Technical Skills</h2>
+
+    <div class="skills-grid">
+
+      <div class="skill-card"><i class="fa-brands fa-java"></i><p>Java</p></div>
+      <div class="skill-card"><i class="fa-brands fa-python"></i><p>Python</p></div>
+      <div class="skill-card"><i class="fa-solid fa-c"></i><p>C</p></div>
+      <div class="skill-card"><i class="fa-brands fa-js"></i><p>JavaScript</p></div>
+      <div class="skill-card"><i class="fa-brands fa-react"></i><p>React</p></div>
+      <div class="skill-card"><i class="fa-brands fa-node"></i><p>Node.js</p></div>
+      <div class="skill-card"><i class="fa-solid fa-database"></i><p>MySQL</p></div>
+      <div class="skill-card"><i class="fa-brands fa-git-alt"></i><p>Git</p></div>
+      <div class="skill-card"><i class="fa-brands fa-docker"></i><p>Docker</p></div>
+      <div class="skill-card"><i class="fa-solid fa-cloud"></i><p>Cloud</p></div>
+      <div class="skill-card"><i class="fa-solid fa-brain"></i><p>Machine Learning</p></div>
+      <div class="skill-card"><i class="fa-solid fa-code"></i><p>DSA & OOPS</p></div>
+
+    </div>
+  </section>
+
+
+  <!-- ===== PROJECTS (unchanged placeholder as requested) ===== -->
+<!-- ===== PROJECTS ===== -->
+<section id="projects" class="fade">
+
+  <style>
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .project-card {
+      background: white;
+      padding: 25px;
+      border-radius: 14px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+      text-align: left;
+      transition: 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .project-card h3 {
+      color: #0a58ca;
+      margin-bottom: 10px;
+    }
+
+    .tech {
+      font-size: 13px;
+      color: #555;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    .project-links a {
+      margin-right: 12px;
+      text-decoration: none;
+      color: #0a58ca;
+      font-weight: bold;
+    }
+  </style>
+
+  <h2>Projects</h2>
+
+  <div class="projects-grid">
+
+    <!-- Quick.ai -->
+    <div class="project-card">
+      <h3>Quick.ai – AI SaaS Platform</h3>
+      <p class="tech">React • Node.js • PostgreSQL • Clerk • Vercel • AI APIs</p>
+      <p>
+        Full-stack AI SaaS platform with subscription billing. Features include
+        article/blog generator, image generator, background remover and resume
+        analyzer. Built secure authentication and deployed complete PERN stack.
+      </p>
+      <div class="project-links">
+        <a href="https://quick-ai-sooty-six.vercel.app/" target="_blank">🔗 Live</a>
+        <a href="https://github.com/shreyajagrotu25" target="_blank">💻 Code</a>
+      </div>
+    </div>
+
+    <!-- Phishing URL Detection -->
+    <div class="project-card">
+      <h3>Phishing URL Detection</h3>
+      <p class="tech">Python • Machine Learning • Scikit-learn • Data Analysis</p>
+      <p>
+        Built ML models to classify malicious and spam URLs. Compared multiple
+        algorithms and evaluated performance to identify the most accurate
+        detection strategy for cybersecurity threats.
+      </p>
+    </div>
+
+    <!-- Obesity Risk Prediction -->
+    <div class="project-card">
+      <h3>Obesity Risk Prediction with Explainable AI</h3>
+      <p class="tech">Python • ML • LIME • SHAP • Data Science</p>
+      <p>
+        Developed a predictive healthcare model and integrated LIME & SHAP for
+        transparent decision explanations. Enabled users to understand feature
+        contributions and model behavior clearly.
+      </p>
+      <div class="project-links">
+        <a href="https://github.com/shreyajagrotu25/obesity_risk" target="_blank">💻 Code</a>
+      </div>
+    </div>
+
+    <!-- Hyderabadi Swaad -->
+    <div class="project-card">
+      <h3>Hyderabadi Swaad – Food Ordering Website</h3>
+      <p class="tech">Node.js • EJS • Tailwind • Socket.io • Stripe</p>
+      <p>
+        Real-time food ordering platform with live order tracking, cart system,
+        and secure Stripe payments. Designed responsive UI and implemented
+        full-stack order management.
+      </p>
+      <div class="project-links">
+        <a href="https://github.com/shreyajagrotu25/SE_Final" target="_blank">💻 Code</a>
+      </div>
+    </div>
+
+    <!-- 3INONE -->
+    <div class="project-card">
+      <h3>3INONE – Multi-Utility Web App</h3>
+      <p class="tech">HTML • CSS • JavaScript • DOM</p>
+      <p>
+        Interactive web app combining To-Do List, Calculator, and
+        Rock-Paper-Scissors game. Focused on UI/UX design and JavaScript DOM
+        manipulation.
+      </p>
+      <div class="project-links">
+        <a href="https://github.com/shreyajagrotu25/3INONE" target="_blank">💻 Code</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+  <!-- ===== CONTACT ===== -->
+<section id="contact" class="fade">
+
+  <style>
+    .contact-wrapper {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .contact-subtext {
+      font-size: 17px;
+      margin-bottom: 40px;
+      color: #555;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+    }
+
+    .contact-card {
+      background: white;
+      padding: 35px 25px;
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+      transition: 0.3s;
+    }
+
+    .contact-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .contact-card i {
+      font-size: 28px;
+      color: #0a58ca;
+      margin-bottom: 12px;
+    }
+
+    .contact-card a {
+      text-decoration: none;
+      color: #222;
+      font-weight: 500;
+      word-break: break-word;
+    }
+
+    .contact-card a:hover {
+      color: #0a58ca;
+    }
+  </style>
+
+  <div class="container contact-wrapper" class="fade">
+
+    <h2>Contact Me</h2>
+
+    <p class="contact-subtext">
+      Feel free to reach out for collaborations, internships, or technical discussions.
+    </p>
+
+    <div class="contact-grid">
+
+      <!-- Email -->
+      <div class="contact-card">
+        <i class="fa-solid fa-envelope"></i>
+        <p>
+          <a href="mailto:shreyajagrotu25@gmail.com">
+            shreyajagrotu25@gmail.com
+          </a>
+        </p>
+      </div>
+
+      <!-- GitHub -->
+      <div class="contact-card">
+        <i class="fa-brands fa-github"></i>
+        <p>
+          <a href="https://github.com/shreyajagrotu25" target="_blank">
+            github.com/shreyajagrotu25
+          </a>
+        </p>
+      </div>
+
+      <!-- LinkedIn -->
+      <div class="contact-card">
+        <i class="fa-brands fa-linkedin"></i>
+        <p>
+          <a href="https://linkedin.com/in/YOUR-LINKEDIN-ID" target="_blank">
+            LinkedIn Profile
+          </a>
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    © 2026 Shreya | ABV-IIITM Gwalior
+  </footer>
+
+  <script>
+  window.addEventListener("DOMContentLoaded", () => {
+    const faders = document.querySelectorAll('.fade');
+
+    const appear = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    });
+
+    faders.forEach(el => appear.observe(el));
+  });
+</script>
+
+</body>
+
+</html>
